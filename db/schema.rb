@@ -15,18 +15,19 @@ ActiveRecord::Schema.define(version: 2020_04_22_124252) do
   create_table "days", force: :cascade do |t|
     t.integer "plan_id"
     t.string "name"
-    t.string "breakfast"
-    t.string "lunch"
-    t.string "dinner"
-    t.float "total_calories"
+    t.integer "breakfast_id"
+    t.integer "lunch_id"
+    t.integer "dinner_id"
+    t.integer "target_calories"
+    t.integer "total_calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.string "desription"
-    t.string "calories"
+    t.string "description"
+    t.integer "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -35,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_04_22_124252) do
     t.integer "day_id"
     t.string "name"
     t.string "dish"
-    t.string "type"
+    t.string "dish_type"
     t.string "origin"
     t.string "cuisine"
     t.string "diet"

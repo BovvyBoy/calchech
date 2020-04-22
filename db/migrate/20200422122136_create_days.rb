@@ -3,10 +3,11 @@ class CreateDays < ActiveRecord::Migration[6.0]
     create_table :days do |t|
       t.integer :plan_id
       t.string :name
-      t.string :breakfast
-      t.string :lunch
-      t.string :dinner
-      t.float :total_calories
+      t.integer :breakfast_id
+      t.integer :lunch_id
+      t.integer :dinner_id
+      t.integer :target_calories
+      t.integer :total_calories
 
       t.timestamps
     end

@@ -4,7 +4,7 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.integer :day_id
       t.string :name
       t.string :dish
-      t.string :type
+      t.string :dish_type
       t.string :origin
       t.string :cuisine
       t.string :diet
