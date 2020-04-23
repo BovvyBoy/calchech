@@ -15,9 +15,6 @@ ActiveRecord::Schema.define(version: 2020_04_22_124252) do
   create_table "days", force: :cascade do |t|
     t.integer "plan_id"
     t.string "name"
-    t.integer "breakfast_id"
-    t.integer "lunch_id"
-    t.integer "dinner_id"
     t.integer "target_calories"
     t.integer "total_calories"
     t.datetime "created_at", precision: 6, null: false

@@ -5,9 +5,6 @@ day = Plan.create(name: "Today", duration: 1)
 day_plan = Day.create(
     plan_id: 1, 
     name: "Todays", 
-    breakfast_id: 1,
-    lunch_id: 2,
-    dinner_id: 3,
     target_calories: 2000,
     total_calories: 1350
     )
