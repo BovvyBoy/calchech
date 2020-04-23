@@ -1,5 +1,5 @@
 class Api::V1::IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:show]
+  before_action :set_ingredient, only: [:index, :show]
 
  
   def index
