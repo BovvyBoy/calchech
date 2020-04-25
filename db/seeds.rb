@@ -50,51 +50,6 @@ dinner = Meal.create(
     image: "",
     cooking_instructions: "Beat eggs and add milk and flour, dip your fish fillets into your mixture and fry at a high temp.",
     calories: 450
-)
-
-#Recipe seed
-
-breakfast_eggs = Recipe.create(
-    meal_id: 1,
-    ingredient_id: 1,
-    ingredient_quantity: 2
-)
-
-lunch_bacon = Recipe.create(
-    meal_id: 2,
-    ingredient_id: 3,
-    ingredient_quantity: 3
-)
-
-lunch_bread = Recipe.create(
-    meal_id: 2,
-    ingredient_id: 4,
-    ingredient_quantity: 2
-)
-
-lunch_lettuce = Recipe.create(
-    meal_id: 2,
-    ingredient_id: 5,
-    ingredient_quantity: 1
-)
-
-lunch_tomato = Recipe.create(
-    meal_id: 2,
-    ingredient_id: 6,
-    ingredient_quantity: 1
-)
-
-dinner_fish = Recipe.create(
-    meal_id: 3,
-    ingredient_id: 8,
-    ingredient_quantity: 1
-)
-
-dinner_chips = Recipe.create(
-    meal_id: 3,
-    ingredient_id: 11,
-    ingredient_quantity: 3
-)
 
 #Ingredient seed
 
@@ -162,4 +117,48 @@ potato = Ingredient.create(
     name: "Fresh Garden Potatoes",
     description: "Full Potatoes",
     calories: 77
+)
+
+#Recipe seed
+
+breakfast_eggs = Recipe.create(
+    meal_id: 1,
+    ingredient_id: 1,
+    ingredient_quantity: 2
+)
+
+lunch_bacon = Recipe.create(
+    meal_id: 2,
+    ingredient_id: 3,
+    ingredient_quantity: 3
+)
+
+lunch_bread = Recipe.create(
+    meal_id: 2,
+    ingredient_id: 4,
+    ingredient_quantity: 2
+)
+
+lunch_lettuce = Recipe.create(
+    meal_id: 2,
+    ingredient_id: 5,
+    ingredient_quantity: 1
+)
+
+lunch_tomato = Recipe.create(
+    meal_id: 2,
+    ingredient_id: 6,
+    ingredient_quantity: 1
+)
+
+dinner_fish = Recipe.create(
+    meal_id: 3,
+    ingredient_id: 8,
+    ingredient_quantity: 1
+)
+
+dinner_chips = Recipe.create(
+    meal_id: 3,
+    ingredient_id: 11,
+    ingredient_quantity: 3
 )
