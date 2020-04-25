@@ -13,8 +13,9 @@ class Api::V1::PlansController < ApplicationController
   end
 
   def create
+    @plan = Plan.new(plan_params)
     if @plan.save
-      render json: @plan, status: :created, location: @plan
+      render json: @plan, status: :created
     else
       render json: @plan.errors, status: :unprocessable_entity
     end
