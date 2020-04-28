@@ -2,7 +2,12 @@ class Api::V1::MealsController < ApplicationController
   before_action :set_meal, only: [:show]
 
   def index
-    @meals = Meal.all
+    if params[:day_id]
+      @day = Day.find_by_id(params[:day_id])
+      @meals = @day.meals
+    else
+      @meals = Meal.all
+    end
     render json: @meals
   end
 

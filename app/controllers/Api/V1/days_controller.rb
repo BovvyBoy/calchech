@@ -1,6 +1,6 @@
 class Api::V1::DaysController < ApplicationController
-  before_action :set_day, only: [:show, :update, :destroy]
-  before_action :set_plan, only: [:create, :update, :destroy]
+  before_action :set_day, only: [:show, :update]
+  before_action :set_plan, only: [:create, :update]
 
   def index
     @days = Day.all
@@ -12,7 +12,6 @@ class Api::V1::DaysController < ApplicationController
   end
 
   def create
-    # @day = Day.new(day_params)
     @day = @plan.days.build(day_params)
 
     if @day.save
@@ -31,7 +30,10 @@ class Api::V1::DaysController < ApplicationController
   end
 
   def destroy
+    @day = Day.find(params[:id])
     @day.destroy
+    @plan = Plan.find(@day.plan_id)
+    render json: @plan
   end
 
   private
