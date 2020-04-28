@@ -11,7 +11,6 @@ day_plan = Day.create(
 
 #Meal seed
 breakfast = Meal.create(
-    day_id: 1,
     name: "British Omelette",
     dish: "Breakfast",
     dish_type: "Hot Breakfast",
@@ -25,7 +24,6 @@ breakfast = Meal.create(
 )
 
 lunch = Meal.create(
-    day_id: 1,
     name: "Bacon Butty",
     dish: "Lunch",
     dish_type: "Hot Sandwhich",
@@ -39,7 +37,6 @@ lunch = Meal.create(
 )
 
 dinner = Meal.create(
-    day_id: 1,
     name: "Fish and Chips",
     dish: "Dinner",
     dish_type: "Hot Dinner",
@@ -50,6 +47,23 @@ dinner = Meal.create(
     image: "",
     cooking_instructions: "Beat eggs and add milk and flour, dip your fish fillets into your mixture and fry at a high temp.",
     calories: 450
+)
+
+#DayMeal seed
+one_breakfast = DayMeal.create(
+    day_id: 1,
+    meal_id: 1
+)
+
+one_lunch = DayMeal.create(
+    day_id: 1,
+    meal_id: 2
+)
+
+one_dinner = DayMeal.create(
+    day_id: 1,
+    meal_id: 3
+)
 
 #Ingredient seed
 

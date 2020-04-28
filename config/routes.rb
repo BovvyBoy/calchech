@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  # resources :day_meals
   namespace :api do
     namespace :v1 do
       resources :plans do

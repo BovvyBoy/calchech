@@ -1,7 +1,6 @@
 class CreateMeals < ActiveRecord::Migration[6.0]
   def change
     create_table :meals do |t|
-      t.integer :day_id
       t.string :name
       t.string :dish
       t.string :dish_type

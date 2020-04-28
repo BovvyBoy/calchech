@@ -16,9 +16,9 @@ class Api::V1::DaysController < ApplicationController
     @day = @plan.days.build(day_params)
 
     if @day.save
-      render json: @day, status: :created, location: @day
+      render json: @plan, status: :created
     else
-      render json: @day.errors, status: :unprocessable_entity
+      render json: @plan.errors, status: :unprocessable_entity
     end
   end
 
