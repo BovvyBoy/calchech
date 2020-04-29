@@ -1,5 +1,5 @@
 class Api::V1::MealsController < ApplicationController
-  before_action :set_meal, only: [:show]
+  before_action :set_meal, only: [:show, :destroy]
 
   def index
     if params[:day_id]
@@ -36,9 +36,12 @@ class Api::V1::MealsController < ApplicationController
   # end
 
  
-  # def destroy
-  #   @meal.destroy
-  # end
+  def destroy
+    @meal.destroy
+    @day = Day.find_by_id(params[:day_id])
+
+    render json: @day
+  end
 
   private
     def set_meal
