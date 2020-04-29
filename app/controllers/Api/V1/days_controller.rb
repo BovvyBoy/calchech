@@ -3,8 +3,9 @@ class Api::V1::DaysController < ApplicationController
   before_action :set_plan, only: [:create, :update]
 
   def index
-    @days = Day.all
-    render json: @days
+    @plan = Plan.find(params[:plan_id])
+  
+    render json: @plan.days
   end
 
   def show
